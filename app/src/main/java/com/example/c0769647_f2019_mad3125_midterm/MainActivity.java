@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                     {
-                        System.out.println("Age"+age);
+
 
                     Intent i = new Intent(MainActivity.this, DisplayDataActivity.class);
                     CRACustomer cDetail = new CRACustomer();
