@@ -17,7 +17,7 @@ public class DisplayDataActivity extends AppCompatActivity {
 
 
     CRACustomer c;
-    TextView sin,fullname,gender,age,taxdate,grossIncome,federalTax,provincialTax,cpp,ei,carry,totalTaxableIncome,Totaltax;
+    TextView sin,fullname,gender,age,taxdate,grossIncome,rrsp,maxRrsp,federalTax,provincialTax,cpp,ei,carry,totalTaxableIncome,Totaltax;
 
     // m = (Marks) getIntent().getSerializableExtra("marks");
 
@@ -41,6 +41,8 @@ public class DisplayDataActivity extends AppCompatActivity {
         carry=findViewById(R.id.txtCarryFrwd);
         totalTaxableIncome=findViewById(R.id.txtTaxableIncome);
         Totaltax=findViewById(R.id.txtTotalTax);
+        rrsp=findViewById(R.id.txtRRSP);
+        maxRrsp=findViewById(R.id.txtMaxRrsp);
 
 
         SimpleDateFormat sm=new SimpleDateFormat("dd-MMM-yyyy", Locale.US);
@@ -71,9 +73,11 @@ public class DisplayDataActivity extends AppCompatActivity {
         grossIncome.setText("$"+String.valueOf(nf.format(c.getGrossIncome())));
         federalTax.setText("$"+String.valueOf(nf.format(c.getFedralTax())));
         provincialTax.setText("$"+String.valueOf(nf.format(c.getProvincialTax())));
+        rrsp.setText(String.valueOf("$"+nf.format(c.getRrsp())));
+        maxRrsp.setText(String.valueOf("$"+nf.format(c.getMaxRrsp())));
         cpp.setText(String.valueOf("$"+nf.format(c.getCpp())));
         ei.setText(String.valueOf("$"+nf.format(c.getEI())));
-        carry.setText(String.valueOf("$"+nf.format(c.getCarryForwardRrsp())+"(Max Rrsp : $"+String.valueOf(nf.format(c.getMaxRrsp()))+")"));
+        carry.setText(String.valueOf("$"+nf.format(c.getCarryForwardRrsp())));
         totalTaxableIncome.setText("$"+String.valueOf(nf.format(c.getTotalTaxedIncome())));
         Totaltax.setText(String.valueOf("$"+nf.format(c.getTotalTaxPaid())));
 

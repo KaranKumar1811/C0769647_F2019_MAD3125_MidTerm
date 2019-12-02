@@ -116,8 +116,8 @@
         android:layout_marginTop="32dp"
         android:text="@string/carry_forward_rrsp"
         android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView17"
@@ -151,7 +151,7 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
-        app:layout_constraintStart_toStartOf="@+id/txtEi" />
+        app:layout_constraintStart_toStartOf="@+id/txtMaxRrsp" />
 
     <TextView
         android:id="@+id/txtEi"
@@ -253,6 +253,42 @@
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView39"
         app:layout_constraintStart_toStartOf="@+id/txtAge" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="RRSP"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/txtRRSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/txtEi" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Max RRSP"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/txtMaxRrsp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/txtRRSP" />
 </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </LinearLayout>
