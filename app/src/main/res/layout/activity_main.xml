@@ -74,7 +74,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/last_name"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    />
 
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -92,7 +93,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="false"
-                    android:focusable="true"
+                    android:focusable="false"
                     android:hint="@string/date_of_birth"
                     android:inputType="none"
 
