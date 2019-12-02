@@ -2,6 +2,7 @@ package com.example.c0769647_f2019_mad3125_midterm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
@@ -164,7 +165,10 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                     if (age < 18) {
+                        dob.setTextColor(getResources().getColor(R.color.colorAccent));
+                        dob.setTypeface(null, Typeface.BOLD_ITALIC);
                         dob.setError("Not Eligible For filing tax");
+                        dob.append("(Under 18)");
 
                     }
 
