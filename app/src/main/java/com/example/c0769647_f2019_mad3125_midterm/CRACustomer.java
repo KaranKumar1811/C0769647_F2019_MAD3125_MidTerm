@@ -194,7 +194,7 @@ public class CRACustomer implements Parcelable {
 
     public double getCarryForwardRrsp() {
 
-        CarryForwardRrsp=MaxRrsp-Rrsp;
+        CarryForwardRrsp=getMaxRrsp()-getRrsp();
         return CarryForwardRrsp;
     }
 

@@ -45,9 +45,14 @@ public class DisplayDataActivity extends AppCompatActivity {
         SimpleDateFormat sm=new SimpleDateFormat("dd-MMM-yyyy", Locale.US);
         Calendar myCalendar = Calendar.getInstance();
         String currdate=sm.format(myCalendar.getTime());
-        if(c.getCarryForwardRrsp()<0){
+
+        System.out.println(c.getCarryForwardRrsp());
+        if(c.getCarryForwardRrsp()<0.0){
             carry.setTextColor(this.getResources().getColor(colorAccent));
             carry.setTypeface(null, Typeface.BOLD_ITALIC);
+        }
+        else {
+
         }
 
 
@@ -68,21 +73,21 @@ public class DisplayDataActivity extends AppCompatActivity {
 
 
 
-//        System.out.println("Sin Number : "+c.getSinNumber());
-//
-//        System.out.println("Full Name : "+c.getFullName());
-//        System.out.println("DOB : "+c.getDateOfBirth());
-//        System.out.println("Age : "+c.getAge());
-//        System.out.println("Gender : "+c.getGender());
-//        System.out.println("Cpp : "+c.getCpp());
-//        System.out.println("Rrsp : "+c.getRrsp());
-//        System.out.println("Max Rrsp : "+c.getMaxRrsp());
-//        System.out.println("Carry : "+c.getCarryForwardRrsp());
-//        System.out.println("Ei : " + c.getEI());
-//        System.out.println("Total Taxable Income : "+c.getTotalTaxedIncome());
-//        System.out.println("Federal Tax : "+c.getFedralTax());
-//        System.out.println("Provincial Tax : "+c.getProvincialTax());
-//        System.out.println("Total Tax Paid : "+c.getTotalTaxPaid());
+        System.out.println("Sin Number : "+c.getSinNumber());
+
+        System.out.println("Full Name : "+c.getFullName());
+        System.out.println("DOB : "+c.getDateOfBirth());
+        System.out.println("Age : "+c.getAge());
+        System.out.println("Gender : "+c.getGender());
+        System.out.println("Cpp : "+c.getCpp());
+        System.out.println("Rrsp : "+c.getRrsp());
+        System.out.println("Max Rrsp : "+c.getMaxRrsp());
+        System.out.println("Carry : "+c.getCarryForwardRrsp());
+        System.out.println("Ei : " + c.getEI());
+        System.out.println("Total Taxable Income : "+c.getTotalTaxedIncome());
+        System.out.println("Federal Tax : "+c.getFedralTax());
+        System.out.println("Provincial Tax : "+c.getProvincialTax());
+        System.out.println("Total Tax Paid : "+c.getTotalTaxPaid());
 
 
 

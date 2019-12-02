@@ -131,79 +131,70 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                if(sin.getText().toString().length() != 11 &&
-                        firstName.getText().toString().length()==0 &&
-                        lastName.getText().toString().length()==0 &&
-                        dob.getText().toString().length()==0 &&
-                        grossIncome.getText().toString().length()==0 &&
+                if(sin.getText().toString().length() != 11 ||
+                        firstName.getText().toString().length()==0 ||
+                        lastName.getText().toString().length()==0 ||
+                        dob.getText().toString().length()==0 ||
+                        grossIncome.getText().toString().length()==0 ||
                         rrsp.getText().toString().length()==0
-
-                ){
-                    sin.setError("Sin Incorrect");
-                    firstName.setError("This Field Cannot Be Empty");
-                    lastName.setError("This Field Cannot Be Empty");
-                    dob.setError("This Field Cannot Be Empty");
-                    grossIncome.setError("This Field Cannot Be Empty");
-                    rrsp.setError("This Field Cannot Be Empty");
-                }
-
-
-                if(sin.getText().toString().length() != 11) {
-                    sin.setError("Sin Incorrect");
-
-                }
-                if(firstName.getText().toString().length()==0)
+                )
                 {
-                    firstName.setError("This Field Cannot Be Empty");
+//                    sin.setError("Sin Incorrect");
+//                    firstName.setError("This Field Cannot Be Empty");
+//                    lastName.setError("This Field Cannot Be Empty");
+//                    dob.setError("This Field Cannot Be Empty");
+//                    grossIncome.setError("This Field Cannot Be Empty");
+//                    rrsp.setError("This Field Cannot Be Empty");
+                    if (sin.getText().toString().length() != 11) {
+                        sin.setError("Sin Incorrect");
+
+                    }
+                    if (firstName.getText().toString().length() == 0) {
+                        firstName.setError("This Field Cannot Be Empty");
+
+                    }
+                    if (lastName.getText().toString().length() == 0) {
+                        lastName.setError("This Field Cannot Be Empty");
+
+                    }
+                    if (dob.getText().toString().length() == 0) {
+                        dob.setError("This Field Cannot Be Empty");
+
+                    }
+//                    if (age < 18) {
+//                        dob.setError("Not Eligible For filing tax");
+//
+//                    }
+
+                    if (grossIncome.getText().toString().length() == 0) {
+                        grossIncome.setError("This Field Cannot Be Empty");
+
+                    }
+                    if (rrsp.getText().toString().length() == 0) {
+                        rrsp.setError("This Field Cannot Be Empty");
+                    }
 
                 }
-                if(lastName.getText().toString().length()==0)
-                {
-                    lastName.setError("This Field Cannot Be Empty");
+                else
+                    {
 
+
+                    Intent i = new Intent(MainActivity.this, DisplayDataActivity.class);
+                    CRACustomer cDetail = new CRACustomer();
+                    cDetail.setSinNumber(sin.getText().toString());
+                    cDetail.setFirstName(firstName.getText().toString());
+                    cDetail.setLastName(lastName.getText().toString());
+                    cDetail.setDateOfBirth(dob.getText().toString());
+                    cDetail.setGrossIncome(Double.parseDouble(grossIncome.getText().toString()));
+                    cDetail.setRrsp(Double.parseDouble((rrsp.getText().toString())));
+                    cDetail.setGender(gender);
+                    cDetail.setAge(Integer.toString(age));
+
+
+                    i.putExtra("data", cDetail);
+
+                    startActivity(i);
                 }
-                if(dob.getText().toString().length()==0)
-                {
-                    dob.setError("This Field Cannot Be Empty");
-
-                }
-                if(age<18)
-                {
-                    dob.setError("Not Eligible For filing tax");
-
-                }
-
-                if(grossIncome.getText().toString().length()==0)
-                {
-                    grossIncome.setError("This Field Cannot Be Empty");
-
-                }
-                if(rrsp.getText().toString().length()==0)
-                {
-                    rrsp.setError("This Field Cannot Be Empty");
-                }
-
-
-
-
-
-
-                Intent i = new Intent(MainActivity.this, DisplayDataActivity.class);
-                CRACustomer cDetail = new CRACustomer();
-                cDetail.setSinNumber(sin.getText().toString());
-                cDetail.setFirstName(firstName.getText().toString());
-                cDetail.setLastName(lastName.getText().toString());
-                cDetail.setDateOfBirth(dob.getText().toString());
-                cDetail.setGrossIncome(Double.parseDouble(grossIncome.getText().toString()));
-                cDetail.setRrsp(Double.parseDouble((rrsp.getText().toString())));
-                cDetail.setGender(gender);
-                cDetail.setAge(Integer.toString(age));
-
-
-                i.putExtra("data", cDetail);
-
-                startActivity(i);
-
 
             }
         });
