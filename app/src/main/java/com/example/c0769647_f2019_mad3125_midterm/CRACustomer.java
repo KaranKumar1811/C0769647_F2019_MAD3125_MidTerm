@@ -297,8 +297,7 @@ public class CRACustomer implements Parcelable {
                     }
                     tax=tax*0.26;
                     calculatedFtax=calculatedFtax+tax;
-//                    System.out.println("Tax 3 : "+tax);
-//                    System.out.println("FTax range 3 : "+tti);
+
                     if (tti > 52407.99)
                     {
                         tti = tti-52407.99;
