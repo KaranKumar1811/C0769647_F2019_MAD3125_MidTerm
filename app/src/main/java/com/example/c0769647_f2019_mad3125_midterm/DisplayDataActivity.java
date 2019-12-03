@@ -82,7 +82,6 @@ public class DisplayDataActivity extends AppCompatActivity {
         Totaltax.setText(String.valueOf("$"+nf.format(c.getTotalTaxPaid())));
 
 
-
         System.out.println("Sin Number : "+c.getSinNumber());
 
         System.out.println("Full Name : "+c.getFullName());
