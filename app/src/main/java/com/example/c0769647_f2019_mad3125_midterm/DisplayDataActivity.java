@@ -98,9 +98,7 @@ public class DisplayDataActivity extends AppCompatActivity {
         System.out.println("Total Tax Paid : "+c.getTotalTaxPaid());
 
 
-
-
-
+        
 
 
     }
