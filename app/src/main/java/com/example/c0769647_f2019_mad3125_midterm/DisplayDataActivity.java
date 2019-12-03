@@ -83,7 +83,6 @@ public class DisplayDataActivity extends AppCompatActivity {
 
 
         System.out.println("Sin Number : "+c.getSinNumber());
-
         System.out.println("Full Name : "+c.getFullName());
         System.out.println("DOB : "+c.getDateOfBirth());
         System.out.println("Age : "+c.getAge());
