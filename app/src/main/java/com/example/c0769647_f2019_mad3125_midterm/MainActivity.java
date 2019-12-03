@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         nAlertDialog.show();
     }
 
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
