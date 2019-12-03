@@ -59,9 +59,7 @@ public class DisplayDataActivity extends AppCompatActivity {
             carry.setTextColor(this.getResources().getColor(colorAccent));
             carry.setTypeface(null, Typeface.BOLD_ITALIC);
         }
-        else {
-
-        }
+        
 
 
 
