@@ -19,7 +19,7 @@ public class DisplayDataActivity extends AppCompatActivity {
     CRACustomer c;
     TextView sin,fullname,gender,age,taxdate,grossIncome,rrsp,maxRrsp,federalTax,provincialTax,cpp,ei,carry,totalTaxableIncome,Totaltax;
 
-    // m = (Marks) getIntent().getSerializableExtra("marks");
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +94,7 @@ public class DisplayDataActivity extends AppCompatActivity {
         System.out.println("Provincial Tax : "+c.getProvincialTax());
         System.out.println("Total Tax Paid : "+c.getTotalTaxPaid());
 
-        
+
     }
 
 }
