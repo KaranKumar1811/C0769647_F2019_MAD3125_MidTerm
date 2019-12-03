@@ -168,9 +168,11 @@ public class MainActivity extends AppCompatActivity {
                         dob.setTextColor(getResources().getColor(R.color.colorAccent));
                         dob.setTypeface(null, Typeface.BOLD_ITALIC);
                         dob.setError("Not Eligible For filing tax");
-                        dob.append("(Under 18)");
-
+                       if(dob.getText().toString().length()!=0){
+                           dob.append("(Under 18)");
+                       }
                     }
+
 
                     if (grossIncome.getText().toString().length() == 0) {
                         grossIncome.setError("This Field Cannot Be Empty");
@@ -184,7 +186,9 @@ public class MainActivity extends AppCompatActivity {
                 else
                     {
 
-
+                    if(age>=18){
+                        dob.setTextColor(getResources().getColor(R.color.black));
+                    }
                     Intent i = new Intent(MainActivity.this, DisplayDataActivity.class);
                     CRACustomer cDetail = new CRACustomer();
                     cDetail.setSinNumber(sin.getText().toString());
