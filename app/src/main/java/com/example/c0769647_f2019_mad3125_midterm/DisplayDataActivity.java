@@ -60,7 +60,7 @@ public class DisplayDataActivity extends AppCompatActivity {
             carry.setTypeface(null, Typeface.BOLD_ITALIC);
         }
 
-        
+
 
         sin.setText(c.getSinNumber());
         fullname.setText(c.getFullName());
@@ -94,8 +94,7 @@ public class DisplayDataActivity extends AppCompatActivity {
         System.out.println("Provincial Tax : "+c.getProvincialTax());
         System.out.println("Total Tax Paid : "+c.getTotalTaxPaid());
 
-
-
+        
     }
 
 }
