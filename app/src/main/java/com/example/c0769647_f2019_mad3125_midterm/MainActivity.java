@@ -188,6 +188,7 @@ public class MainActivity extends AppCompatActivity {
 
                     if(age>=18){
                         dob.setTextColor(getResources().getColor(R.color.black));
+                        dob.setTypeface(null, Typeface.NORMAL);
                     }
                     Intent i = new Intent(MainActivity.this, DisplayDataActivity.class);
                     CRACustomer cDetail = new CRACustomer();
