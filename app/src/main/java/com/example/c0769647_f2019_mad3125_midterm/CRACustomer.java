@@ -338,12 +338,11 @@ public class CRACustomer implements Parcelable {
 
 
 
-
-
+        
 
         return calculatedFtax;
     }
-    
+
 
     public double CalProvincialTax()
     {
