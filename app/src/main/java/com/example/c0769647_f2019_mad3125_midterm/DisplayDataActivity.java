@@ -96,7 +96,7 @@ public class DisplayDataActivity extends AppCompatActivity {
         System.out.println("Federal Tax : "+c.getFedralTax());
         System.out.println("Provincial Tax : "+c.getProvincialTax());
         System.out.println("Total Tax Paid : "+c.getTotalTaxPaid());
-        
+
 
 
     }
