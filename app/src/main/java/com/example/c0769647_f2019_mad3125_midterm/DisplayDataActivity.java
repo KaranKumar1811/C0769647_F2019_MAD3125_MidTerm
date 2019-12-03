@@ -19,7 +19,7 @@ public class DisplayDataActivity extends AppCompatActivity {
     CRACustomer c;
     TextView sin,fullname,gender,age,taxdate,grossIncome,rrsp,maxRrsp,federalTax,provincialTax,cpp,ei,carry,totalTaxableIncome,Totaltax;
 
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
