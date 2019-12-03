@@ -438,7 +438,6 @@ public class CRACustomer implements Parcelable {
 
     private static final CRACustomer ourInstance = new CRACustomer();
 
-
     
 
     public static CRACustomer getInstance() {
