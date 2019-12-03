@@ -338,7 +338,6 @@ public class CRACustomer implements Parcelable {
 
 
 
-        
 
         return calculatedFtax;
     }
