@@ -2,6 +2,8 @@ package com.example.c0769647_f2019_mad3125_midterm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
@@ -29,6 +31,25 @@ public class MainActivity extends AppCompatActivity {
     Button calTaxBtn;
     String gender;
     int age;
+    private void showAlert()
+    {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        //alertDialogBuilder.setIcon(R.drawable.ic_action_name);
+        alertDialogBuilder.setTitle("Error");
+        alertDialogBuilder.setMessage("Not Eligible to File Tax! Age is less than 18!");
+        alertDialogBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        alertDialogBuilder.setNegativeButton("Cancle", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+            }
+        });
+        AlertDialog nAlertDialog=alertDialogBuilder.create();
+        nAlertDialog.show();
+    }
 
 
     @Override
@@ -167,10 +188,12 @@ public class MainActivity extends AppCompatActivity {
                     if (age < 18) {
                         dob.setTextColor(getResources().getColor(R.color.colorAccent));
                         dob.setTypeface(null, Typeface.BOLD_ITALIC);
-                        dob.setError("Not Eligible For filing tax");
-                       if(dob.getText().toString().length()!=0){
-                           dob.append("(Under 18)");
-                       }
+
+//                       if(dob.getText().toString().length()!=0){
+//                           dob.append("(Under 18)");
+//
+//                       }
+                        showAlert();
                     }
 
 
