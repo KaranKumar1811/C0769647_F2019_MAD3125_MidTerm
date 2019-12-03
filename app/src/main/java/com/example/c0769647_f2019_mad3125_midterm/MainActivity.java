@@ -6,7 +6,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.annotation.SuppressLint;
+
 import android.app.DatePickerDialog;
 import android.content.Intent;
 
